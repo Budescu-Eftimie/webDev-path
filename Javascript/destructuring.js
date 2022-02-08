@@ -11,14 +11,19 @@ const myArray = ["Timi", "John", "Mathew", "Tony", "Brad", "Jenny", "Andreea"];
     two persons in they're own variable we could do it like this
     before ES6 destructuring syntax: */
 
-const pers1 = myArray[0];
-const pers2 = myArray[1];
+let pers1 = myArray[0];
+let pers2 = myArray[1];
 console.log(pers1, pers2); // logs Timi John
 
-//  but with destructuring is much better
+//  but using destructuring gives us back cleanner code:
 
-const [persTwo, persThree] = myArray;
+let [persTwo, persThree] = myArray;
 console.log(persTwo, persThree); // also logs Timi John
+
+// we can also skip over elements:
+
+let [name1, , name3] = myArray;
+console.log(name1, name3); // logs Timi, Mathew
 
 /*  in the below example we single out the first two names of [myArray]
     while the rest of the names are stored in a new list [otherPersons]
